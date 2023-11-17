@@ -1,0 +1,434 @@
+:root {
+    --primary: #e57a7a;
+    --bg: #a5a1a1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none; 
+}
+
+body {
+    font-family:'Crimson text', sans-serif;
+    background-color: var(--bg);
+    color: black;
+}
+
+/*Navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:rgba(229, 122, 122, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    font-style: italic;
+}
+
+.navbar .navbar-nav a, .dropdown a, .dropdown, .dropdown-content {
+    color: #000000;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color:palegreen
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform:scaleX(0.7);
+}
+
+.navbar .navbar-nav a::after {
+    display: block;
+    content: '';
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid palegreen;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-extra a {
+    color: #000000;
+    margin: 1 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: palegreen;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navbar .navbar-extra a::after {
+    display: block;
+    content: '';
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid palegreen;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+ 
+/*Back Section*/
+.back {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(images/third.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.back::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(166, 161, 161, 1) 8%, rgba(200, 199, 199, 0) 50%);
+}
+
+.back .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.back .content h1 {
+    font-size: 3em;
+    text-shadow: 1px 1px 3px rgba(166, 161, 161, 0.5);
+}
+
+.back .content h1 span {
+    color: var(--primary);
+}
+
+.back .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    color:black;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px rgba(166, 161, 161, 0.5);
+}
+
+.contact, .registration {
+    padding-top: 10rem;
+    padding-bottom: 1.4rem;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.contact h2, .registration h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: black;
+}
+
+.galery h2, .about h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: black;
+}
+
+.galery, .about {
+    padding-top: 10rem;
+    padding-bottom: 1.4rem;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.galery-slide {
+    width: 400px;
+    height: 350px;
+    border-radius: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    margin-top: 2rem
+}
+
+.content p { 
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.content img {
+    width: 400px;
+    border-radius: 40%;
+    height: 350px;
+    display: flex;
+    margin:auto
+}
+
+.matter p {
+    padding-top: 3rem;
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.rekomendasi {
+    padding-top: 10rem;
+    padding-bottom: 1.4rem;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.rekomendasi h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.rekomendasi p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 200;
+    line-height: 1.6;
+    font-size:x-large;
+}
+
+.rekomendasi .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.rekomendasi-list {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.rekomendasi-list-img {
+    border-radius: 50%;
+    width: 10%;
+    margin-top: 1rem;
+}
+
+.rekomendasi-list-title {
+    margin-top: 1rem auto 0.5rem;
+    text-align: center;
+    font-size: large;
+}
+
+.rekomendasi-list-notes {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: medium;
+}
+
+.rekomendasi h2 span {
+    color:#b75156;
+}
+
+.matter p span {
+    color:#b75156;
+}
+
+.content p span{
+    color:#b75156;
+}
+
+.registration .row {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.row form {
+    flex: 1 1 45rem;
+    padding: 3rem 25rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 102%;
+    color: #000000;
+}
+
+.row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: rgb(247, 162, 162);
+    border: 1px solid #b75156;
+    color: #000000;
+    padding-left: 2rem;
+}
+
+.row form .input-group input {
+    width: 100%;
+    padding: 3rem;
+    font-size: 1rem;
+    background: none;
+    color: #000000;
+}
+
+.row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    color: #000000;
+    background-color:#e57a7a;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding-top: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    padding-bottom: 6.5rem;
+}
+
+.links {
+    margin-bottom: 1.6rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.links a:hover {
+    color:palegreen;
+}
+
+.links a {
+    color: #000000;
+    padding: 0.7rem 1rem;
+}
+
+.credit {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    font-family: 'Crimson text', sans-serif;
+    font-size: 1.3rem;
+    margin: 0 0rem;
+  }
+  
+  .dropdown .dropbtn:hover {
+    color:palegreen;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:azure;
+    min-width: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links dropdown */
+  .dropdown-content a {
+    float: none;
+    color:#e57a7a;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: azure;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/*Media Queries*/
+/*Laptop*/
+@media (max-width: 1366px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+/*Tablet*/
+@media (max-width: 758px) {
+    html {
+        font-size: 60%;
+    }
+    
+    #hamburger-menu {
+        display: inline-block;}
+        
+        .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color:#f9a1a1;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;}
+        
+        .navbar .navbar-nav.active {
+        right: 0;}
+    
+        .navbar .navbar-nav a {
+            display: block;
+            margin: 1.5rem;
+            padding: 0.5rem;}
+    
+        .navbar .navbar-nav a::after {
+            transform-origin: 0 0;}
+    
+        .navbar .navbar-nav a:hover::after {
+            transform: scaleX(0.2);}
+        }
+    
+    .registration .row {
+        flex-wrap: wrap;
+        padding: 0 0;
+    }
+
+    .row form {
+        padding: 3rem 25rem;
+    }
+
+/*Handphone*/
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+    
+    
+
